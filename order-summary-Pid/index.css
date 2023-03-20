@@ -1,0 +1,156 @@
+/* Font Family Red Hat Display
+Font Weight 500,700,900 */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* font-family: 'Red Hat Display', sans-serif; */
+
+/* Variable Colors */
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+    --fontRedHatDisplay: 'Red Hat Display', sans-serif;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontRedHatDisplay);
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: url(./images/pattern-background-mobile.svg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -420px;
+    background-color: var(--paleBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    height: 600px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+    margin-top: 0.5em;
+}
+
+/* Card Styles */
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-image > .card-image__hero {
+    width: 21.2em;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+    z-index: 1;
+}
+
+.card-details {
+    height: 400px;
+    width: 339px;
+    padding: 30px 25px;
+    background-color: white;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    margin-top: -5px;
+}
+
+.card__title {
+    color: var(--darkBlue);
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    margin-bottom: .8em;
+}
+
+.card__description {
+    color: var(--desaturatedBlue);
+    text-align: center;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.annual-plan {
+    display: flex;
+    align-items: center;
+    height: 85px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--veryPaleBlue);
+    border-radius: 1em;
+    margin-bottom: 1.7em;
+}
+
+.music__icon {
+    height: 50px;
+}
+
+.annual-dates {
+    margin-left: 1em;
+}
+
+.annual__title {
+    color: var(--darkBlue);
+    font-weight: 900;
+}
+
+.annual__price {
+    color: var(--desaturatedBlue);
+}
+
+.change {
+    color: var(--brightBlue);
+    margin-left: 1.7em;
+    font-weight: 700;
+}
+
+.btn-payment {
+    color: white;
+    width: 100%;
+    background-color: var(--brightBlue);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    border-radius: .8em;
+    font-weight: 700;
+    box-shadow: .5px 8px 20px var(--desaturatedBlue);
+    cursor: pointer;
+    margin-bottom: 1.3em;
+}
+
+.cancel-order {
+    color: var(--desaturatedBlue);
+    text-align: end;
+    text-decoration: unset;
+    font-weight: 700;
+    margin-left: 90px;
+}
+
+/* Media Queries Desktop (min-width: 900px) */
+
+@media (min-width: 900px) {
+    body {
+        background: url(./images/pattern-background-desktop.svg);
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: -300px;
+        background-position-x: -100px;
+        background-color: var(--paleBlue);
+    }
+}
